@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cons_one"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/yazi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="112dp"
+        android:text=" "
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/sw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.816"
+        app:layout_constraintStart_toEndOf="@+id/gib"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/gib"
+        android:layout_width="133dp"
+        android:layout_height="146dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/gib_transparan"
+        app:layout_constraintBottom_toBottomOf="@+id/txtGib"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/txtGib"
+        android:layout_width="237.55dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="85dp"
+        android:layout_marginBottom="15dp"
+        android:text="GELİR İDARESİ BAŞKANLIĞI"
+        android:textColor="#E40E0E"
+        android:textSize="34dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/gib"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="358dp"
+        android:layout_height="342dp"
+        android:layout_marginBottom="66dp"
+        android:background="@drawable/kivrimli_kenarlik"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txtGib"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="@+id/gib"
+        app:layout_constraintTop_toBottomOf="@+id/txtGib">
+
+        <EditText
+            android:id="@+id/kullaniciText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="41dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="15dp"
+            android:background="#30ffffff"
+            android:drawableLeft="@drawable/ic_baseline_person_24"
+            android:drawablePadding="20dp"
+            android:hint="Kullanıcı Adı"
+            android:padding="20dp"
+            android:textColor="#E3DADA"
+            android:textColorHint="#E3DADA"
+            app:layout_constraintBottom_toTopOf="@+id/parolaText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Button
+            android:id="@+id/btn_giris"
+            android:layout_width="90dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="63dp"
+            android:background="@drawable/butonarkaplan"
+            android:backgroundTint="#30ffffff"
+            android:text="Giriş Yap"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_kayit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btn_kayit" />
+
+        <Button
+            android:id="@+id/btn_kayit"
+            android:layout_width="90dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="63dp"
+            android:layout_marginBottom="56dp"
+            android:background="@drawable/butonarkaplan"
+            android:backgroundTint="#30ffffff"
+            android:text="Kayıt Ol"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sifremiUnuttum" />
+
+        <TextView
+            android:id="@+id/sifremiUnuttum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="17dp"
+            android:layout_marginBottom="23dp"
+            android:text="Şifremi Unuttum"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_kayit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/parolaText" />
+
+        <EditText
+
+            android:id="@+id/parolaText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="11dp"
+            android:background="#30ffffff"
+            android:drawableLeft="@drawable/ic_baseline_info_24"
+            android:drawablePadding="20dp"
+            android:hint="Parola"
+            android:inputType="textPassword"
+            android:padding="20dp"
+            android:textColor="#E3DADA"
+            android:textColorHint="#E3DADA"
+            app:layout_constraintBottom_toTopOf="@+id/sifremiUnuttum"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/kullaniciText"
+            tools:layout_editor_absoluteX="76dp"
+            tools:layout_editor_absoluteY="206dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/iletisim"
+        android:layout_width="91dp"
+        android:layout_height="36dp"
+        android:drawableLeft="@drawable/ic_baseline_phone_24_black"
+        android:gravity="center"
+        android:text="iletişim"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
